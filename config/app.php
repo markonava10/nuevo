@@ -67,7 +67,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'America/Mexico_City',
 
     /*
     |--------------------------------------------------------------------------
@@ -79,7 +79,7 @@ return [
     | to any of the locales which will be supported by the application.
     |
     */
-
+    'locale' => 'es',
     'locale' => 'en',
 
     /*
