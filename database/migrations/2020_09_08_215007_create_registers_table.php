@@ -14,8 +14,19 @@ class CreateRegistersTable extends Migration
     public function up()
     {
         Schema::create('registers', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->increments('id');
+            $table->integer('subsidiary_id')->unsigned();
+            $table->string('register',20);
+            $table->enum('type', ['N', 'S'])->default('N');       // N=Normal S=Safe (Fuerte)
+            $table->float('amount_open', 8, 2)->default('0');     // Importe para abrir
+            $table->float('amount_close', 8, 2)->default('0');    // Importe a dejar al cerrar
+            $table->boolean('open')->default('0');                // ¿Está abierta o cerrada?
+            $table->boolean('petty_cash_to_close')->default('0'); // Obligatorio hacer Petty Cash?
+            $table->softDeletes();
+            $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at')->useCurrent();
+            // Las llaves foraneas
+            $table->foreign('subsidiary_id')->references('id')->on('subsidiaries')->onDelete('cascade');
         });
     }
 

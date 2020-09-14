@@ -14,8 +14,19 @@ class CreateSubsidiariesTable extends Migration
     public function up()
     {
         Schema::create('subsidiaries', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->increments('id');
+            $table->string('subsidiary',80)->unique();
+            $table->string('address',60)->null();
+            $table->integer('zipcode')->unsigned();
+            $table->string('phone',15)->null();
+            $table->boolean('active')->default('0');
+            $table->integer('company_id')->unsigned();
+            $table->softDeletes();
+            $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at')->useCurrent();
+            // Las llaves foraneas
+            $table->foreign('company_id')->references('id')->on('companies')->onDelete('cascade');
+            $table->foreign('zipcode')->references('zipcode')->on('zipcodes')->onDelete('cascade');
         });
     }
 

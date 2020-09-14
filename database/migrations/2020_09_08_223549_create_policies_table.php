@@ -14,8 +14,24 @@ class CreatePoliciesTable extends Migration
     public function up()
     {
         Schema::create('policies', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->increments('id');
+            $table->integer('company_id')->unsigned();
+            $table->integer('service_id')->unsigned();
+            $table->enum('entity', ['customer','receiver','transaction','issue']);
+            $table->string('policy',50)->nullable();
+            $table->enum('type_value', ['amount', 'quantity']);
+            $table->integer('days')->default(0);
+            $table->decimal('limit_allowed', 9, 2);
+            $table->enum('value_to_count', ['amount','subsidiary_id','transactions','provider_id','payer_id','receiver_id','issue_id','customer_id']);
+            $table->unsignedInteger('priorirty')->default(0);
+            $table->enum('action_type', ['warning', 'terminal'])->default('warning');
+            $table->string('message')->null();
+            $table->softDeletes();
+            $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at')->useCurrent();
+            // Las llaves foraneas
+            $table->foreign('company_id')->references('id')->on('companies')->onDelete('cascade');
+            $table->foreign('service_id')->references('id')->on('services')->onDelete('cascade');
         });
     }
 

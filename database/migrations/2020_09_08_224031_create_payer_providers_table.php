@@ -14,8 +14,11 @@ class CreatePayerProvidersTable extends Migration
     public function up()
     {
         Schema::create('payer_providers', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->integer('payer_id')->unsigned();
+            $table->integer('provider_id')->unsigned();
+            $table->softDeletes();
+            $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at')->useCurrent();
         });
     }
 

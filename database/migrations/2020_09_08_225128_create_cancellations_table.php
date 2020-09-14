@@ -14,8 +14,19 @@ class CreateCancellationsTable extends Migration
     public function up()
     {
         Schema::create('cancellations', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->integer('transaction_id')->unsigned();
+            $table->integer('reason_id')->unsigned();
+            $table->integer('user_id')->unsigned();
+            $table->string('voucher')->nullable()->default(Null);
+            $table->softDeletes();
+            $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at')->useCurrent();
+            // Llave primaria
+            $table->primary('transaction_id');
+            // Llaves foráneas
+            $table->foreign('transaction_id')->references('id')->on('transactions')->onDelete('cascade');
+            $table->foreign('reason_id')->references('id')->on('reasons')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

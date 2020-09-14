@@ -14,8 +14,17 @@ class CreatePayersTable extends Migration
     public function up()
     {
         Schema::create('payers', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->increments('id');
+            $table->string('payer',50)->unique();
+            $table->string('short',10)->unique();
+            $table->string('logo',150)->nullable();
+            $table->decimal('exchange_rate', 12, 4)->default(0);
+            $table->integer('country_id')->unsigned();
+            $table->softDeletes();
+            $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at')->useCurrent();
+           // Las llaves foraneas
+            $table->foreign('country_id')->references('id')->on('countries')->onDelete('cascade');
         });
     }
 

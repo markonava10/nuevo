@@ -14,8 +14,15 @@ class CreateMarksTable extends Migration
     public function up()
     {
         Schema::create('marks', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->increments('id');
+            $table->integer('company_id')->unsigned();
+            $table->string('mark',80);
+            $table->enum('action', ['M', 'U']);
+            $table->softDeletes();
+            $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at')->useCurrent();
+            // Las llaves foraneas
+            $table->foreign('company_id')->references('id')->on('companies')->onDelete('cascade');
         });
     }
 

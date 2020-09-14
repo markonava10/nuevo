@@ -14,8 +14,15 @@ class CreateExchangeChargesTable extends Migration
     public function up()
     {
         Schema::create('exchange_charges', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->increments('id');
+            $table->integer('company_id')->unsigned();
+            $table->date('exchange_date');
+            $table->float('exchange_rate', 9, 5);
+            $table->softDeletes();
+            $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at')->useCurrent();
+            // Las llaves foraneas
+            $table->foreign('company_id')->references('id')->on('companies')->onDelete('cascade');
         });
     }
 

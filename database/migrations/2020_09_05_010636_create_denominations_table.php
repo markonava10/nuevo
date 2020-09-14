@@ -15,6 +15,9 @@ class CreateDenominationsTable extends Migration
     {
         Schema::create('denominations', function (Blueprint $table) {
             $table->id();
+            $table->string('spanish',20);
+            $table->string('english',20);
+            
             $table->timestamps();
         });
     }
