@@ -1,0 +1,453 @@
+<?php
+
+use Illuminate\Database\Seeder;
+use TCG\Voyager\Models\DataType;
+
+class RegistersBreadRowAdded extends Seeder
+{
+    /**
+     * Auto generated seed file
+     *
+     * @return void
+     *
+     * @throws Exception
+     */
+    public function run()
+    {
+        try {
+            \DB::beginTransaction();
+
+            $dataType = DataType::where('name', 'registers')->first();
+
+            \DB::table('data_rows')->insert(array (
+                0 => 
+                array (
+                    'data_type_id' => $dataType->id,
+                    'field' => 'id',
+                    'type' => 'text',
+                    'display_name' => 'Id',
+                    'required' => 1,
+                    'browse' => 1,
+                    'read' => 1,
+                    'edit' => 1,
+                    'add' => 1,
+                    'delete' => 1,
+                    'details' => '{}',
+                    'order' => 1,
+                ),
+                1 => 
+                array (
+                    'data_type_id' => $dataType->id,
+                    'field' => 'subsidiary_id',
+                    'type' => 'text',
+                    'display_name' => 'Subsidiary Id',
+                    'required' => 1,
+                    'browse' => 0,
+                    'read' => 0,
+                    'edit' => 0,
+                    'add' => 0,
+                    'delete' => 0,
+                    'details' => '{}',
+                    'order' => 2,
+                ),
+                2 => 
+                array (
+                    'data_type_id' => $dataType->id,
+                    'field' => 'register',
+                    'type' => 'text',
+                    'display_name' => 'Register',
+                    'required' => 1,
+                    'browse' => 1,
+                    'read' => 1,
+                    'edit' => 1,
+                    'add' => 1,
+                    'delete' => 1,
+                    'details' => '{}',
+                    'order' => 3,
+                ),
+                3 => 
+                array (
+                    'data_type_id' => $dataType->id,
+                    'field' => 'type',
+                    'type' => 'select_dropdown',
+                    'display_name' => 'Type',
+                    'required' => 1,
+                    'browse' => 1,
+                    'read' => 1,
+                    'edit' => 1,
+                    'add' => 1,
+                    'delete' => 1,
+                    'details' => '{}',
+                    'order' => 4,
+                ),
+                4 => 
+                array (
+                    'data_type_id' => $dataType->id,
+                    'field' => 'amount_open',
+                    'type' => 'number',
+                    'display_name' => 'Amount Open',
+                    'required' => 0,
+                    'browse' => 1,
+                    'read' => 1,
+                    'edit' => 1,
+                    'add' => 1,
+                    'delete' => 1,
+                    'details' => '{}',
+                    'order' => 5,
+                ),
+                5 => 
+                array (
+                    'data_type_id' => $dataType->id,
+                    'field' => 'open_close_extra',
+                    'type' => 'number',
+                    'display_name' => 'Open Close Extra',
+                    'required' => 0,
+                    'browse' => 1,
+                    'read' => 1,
+                    'edit' => 1,
+                    'add' => 1,
+                    'delete' => 1,
+                    'details' => '{}',
+                    'order' => 6,
+                ),
+                6 => 
+                array (
+                    'data_type_id' => $dataType->id,
+                    'field' => 'amount_close',
+                    'type' => 'number',
+                    'display_name' => 'Amount Close',
+                    'required' => 0,
+                    'browse' => 1,
+                    'read' => 1,
+                    'edit' => 1,
+                    'add' => 1,
+                    'delete' => 1,
+                    'details' => '{}',
+                    'order' => 7,
+                ),
+                7 => 
+                array (
+                    'data_type_id' => $dataType->id,
+                    'field' => 'balance_min_mon',
+                    'type' => 'number',
+                    'display_name' => 'Balance Min Mon',
+                    'required' => 0,
+                    'browse' => 1,
+                    'read' => 1,
+                    'edit' => 1,
+                    'add' => 1,
+                    'delete' => 1,
+                    'details' => '{}',
+                    'order' => 8,
+                ),
+                8 => 
+                array (
+                    'data_type_id' => $dataType->id,
+                    'field' => 'balance_min_tue',
+                    'type' => 'number',
+                    'display_name' => 'Balance Min Tue',
+                    'required' => 0,
+                    'browse' => 1,
+                    'read' => 1,
+                    'edit' => 1,
+                    'add' => 1,
+                    'delete' => 1,
+                    'details' => '{}',
+                    'order' => 9,
+                ),
+                9 => 
+                array (
+                    'data_type_id' => $dataType->id,
+                    'field' => 'balance_min_wed',
+                    'type' => 'number',
+                    'display_name' => 'Balance Min Wed',
+                    'required' => 0,
+                    'browse' => 1,
+                    'read' => 1,
+                    'edit' => 1,
+                    'add' => 1,
+                    'delete' => 1,
+                    'details' => '{}',
+                    'order' => 10,
+                ),
+                10 => 
+                array (
+                    'data_type_id' => $dataType->id,
+                    'field' => 'balance_min_thu',
+                    'type' => 'number',
+                    'display_name' => 'Balance Min Thu',
+                    'required' => 0,
+                    'browse' => 1,
+                    'read' => 1,
+                    'edit' => 1,
+                    'add' => 1,
+                    'delete' => 1,
+                    'details' => '{}',
+                    'order' => 11,
+                ),
+                11 => 
+                array (
+                    'data_type_id' => $dataType->id,
+                    'field' => 'balance_min_fri',
+                    'type' => 'number',
+                    'display_name' => 'Balance Min Fri',
+                    'required' => 0,
+                    'browse' => 1,
+                    'read' => 1,
+                    'edit' => 1,
+                    'add' => 1,
+                    'delete' => 1,
+                    'details' => '{}',
+                    'order' => 12,
+                ),
+                12 => 
+                array (
+                    'data_type_id' => $dataType->id,
+                    'field' => 'balance_min_sat',
+                    'type' => 'number',
+                    'display_name' => 'Balance Min Sat',
+                    'required' => 0,
+                    'browse' => 1,
+                    'read' => 1,
+                    'edit' => 1,
+                    'add' => 1,
+                    'delete' => 1,
+                    'details' => '{}',
+                    'order' => 13,
+                ),
+                13 => 
+                array (
+                    'data_type_id' => $dataType->id,
+                    'field' => 'balance_min_sun',
+                    'type' => 'number',
+                    'display_name' => 'Balance Min Sun',
+                    'required' => 0,
+                    'browse' => 1,
+                    'read' => 1,
+                    'edit' => 1,
+                    'add' => 1,
+                    'delete' => 1,
+                    'details' => '{}',
+                    'order' => 14,
+                ),
+                14 => 
+                array (
+                    'data_type_id' => $dataType->id,
+                    'field' => 'balance_max_mon',
+                    'type' => 'number',
+                    'display_name' => 'Balance Max Mon',
+                    'required' => 0,
+                    'browse' => 1,
+                    'read' => 1,
+                    'edit' => 1,
+                    'add' => 1,
+                    'delete' => 1,
+                    'details' => '{}',
+                    'order' => 15,
+                ),
+                15 => 
+                array (
+                    'data_type_id' => $dataType->id,
+                    'field' => 'balance_max_tue',
+                    'type' => 'number',
+                    'display_name' => 'Balance Max Tue',
+                    'required' => 0,
+                    'browse' => 1,
+                    'read' => 1,
+                    'edit' => 1,
+                    'add' => 1,
+                    'delete' => 1,
+                    'details' => '{}',
+                    'order' => 16,
+                ),
+                16 => 
+                array (
+                    'data_type_id' => $dataType->id,
+                    'field' => 'balance_max_wed',
+                    'type' => 'number',
+                    'display_name' => 'Balance Max Wed',
+                    'required' => 0,
+                    'browse' => 1,
+                    'read' => 1,
+                    'edit' => 1,
+                    'add' => 1,
+                    'delete' => 1,
+                    'details' => '{}',
+                    'order' => 17,
+                ),
+                17 => 
+                array (
+                    'data_type_id' => $dataType->id,
+                    'field' => 'balance_max_thu',
+                    'type' => 'number',
+                    'display_name' => 'Balance Max Thu',
+                    'required' => 0,
+                    'browse' => 1,
+                    'read' => 1,
+                    'edit' => 1,
+                    'add' => 1,
+                    'delete' => 1,
+                    'details' => '{}',
+                    'order' => 18,
+                ),
+                18 => 
+                array (
+                    'data_type_id' => $dataType->id,
+                    'field' => 'balance_max_fri',
+                    'type' => 'number',
+                    'display_name' => 'Balance Max Fri',
+                    'required' => 0,
+                    'browse' => 1,
+                    'read' => 1,
+                    'edit' => 1,
+                    'add' => 1,
+                    'delete' => 1,
+                    'details' => '{}',
+                    'order' => 19,
+                ),
+                19 => 
+                array (
+                    'data_type_id' => $dataType->id,
+                    'field' => 'balance_max_sat',
+                    'type' => 'number',
+                    'display_name' => 'Balance Max Sat',
+                    'required' => 0,
+                    'browse' => 1,
+                    'read' => 1,
+                    'edit' => 1,
+                    'add' => 1,
+                    'delete' => 1,
+                    'details' => '{}',
+                    'order' => 20,
+                ),
+                20 => 
+                array (
+                    'data_type_id' => $dataType->id,
+                    'field' => 'balance_max_sun',
+                    'type' => 'number',
+                    'display_name' => 'Balance Max Sun',
+                    'required' => 0,
+                    'browse' => 1,
+                    'read' => 1,
+                    'edit' => 1,
+                    'add' => 1,
+                    'delete' => 1,
+                    'details' => '{}',
+                    'order' => 21,
+                ),
+                21 => 
+                array (
+                    'data_type_id' => $dataType->id,
+                    'field' => 'balance',
+                    'type' => 'number',
+                    'display_name' => 'Balance',
+                    'required' => 0,
+                    'browse' => 1,
+                    'read' => 1,
+                    'edit' => 1,
+                    'add' => 1,
+                    'delete' => 1,
+                    'details' => '{}',
+                    'order' => 22,
+                ),
+                22 => 
+                array (
+                    'data_type_id' => $dataType->id,
+                    'field' => 'folio',
+                    'type' => 'number',
+                    'display_name' => 'Folio',
+                    'required' => 0,
+                    'browse' => 1,
+                    'read' => 1,
+                    'edit' => 1,
+                    'add' => 1,
+                    'delete' => 1,
+                    'details' => '{}',
+                    'order' => 23,
+                ),
+                23 => 
+                array (
+                    'data_type_id' => $dataType->id,
+                    'field' => 'priority',
+                    'type' => 'number',
+                    'display_name' => 'Priority',
+                    'required' => 1,
+                    'browse' => 1,
+                    'read' => 1,
+                    'edit' => 1,
+                    'add' => 1,
+                    'delete' => 1,
+                    'details' => '{}',
+                    'order' => 24,
+                ),
+                24 => 
+                array (
+                    'data_type_id' => $dataType->id,
+                    'field' => 'open',
+                    'type' => 'checkbox',
+                    'display_name' => 'Open',
+                    'required' => 1,
+                    'browse' => 1,
+                    'read' => 1,
+                    'edit' => 1,
+                    'add' => 1,
+                    'delete' => 1,
+                    'details' => '{}',
+                    'order' => 25,
+                ),
+                25 => 
+                array (
+                    'data_type_id' => $dataType->id,
+                    'field' => 'petty_cash_to_close',
+                    'type' => 'checkbox',
+                    'display_name' => 'Petty Cash To Close',
+                    'required' => 1,
+                    'browse' => 1,
+                    'read' => 1,
+                    'edit' => 1,
+                    'add' => 1,
+                    'delete' => 1,
+                    'details' => 'null',
+                    'order' => 26,
+                ),
+                26 => 
+                array (
+                    'data_type_id' => $dataType->id,
+                    'field' => 'created_at',
+                    'type' => 'timestamp',
+                    'display_name' => 'Created At',
+                    'required' => 0,
+                    'browse' => 1,
+                    'read' => 1,
+                    'edit' => 1,
+                    'add' => 0,
+                    'delete' => 0,
+                    'details' => '{}',
+                    'order' => 27,
+                ),
+                27 => 
+                array (
+                    'data_type_id' => $dataType->id,
+                    'field' => 'updated_at',
+                    'type' => 'timestamp',
+                    'display_name' => 'Updated At',
+                    'required' => 0,
+                    'browse' => 0,
+                    'read' => 0,
+                    'edit' => 0,
+                    'add' => 0,
+                    'delete' => 0,
+                    'details' => '{}',
+                    'order' => 28,
+                ),
+            ));
+        } catch(Exception $e) {
+            throw new Exception('exception occur ' . $e);
+
+            \DB::rollBack();
+        }
+
+        \DB::commit();
+    }
+}
+
