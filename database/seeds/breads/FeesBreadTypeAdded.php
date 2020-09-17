@@ -44,8 +44,8 @@ class FeesBreadTypeAdded extends Seeder
                 'generate_permissions' => 1,
                 'server_side' => 0,
                 'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
-                'created_at' => '2020-09-09T03:58:18.000000Z',
-                'updated_at' => '2020-09-17T17:00:22.000000Z',
+                'created_at' => '2020-09-09T03:58:18',
+                'updated_at' => '2020-09-17T17:00:22',
             ));
 
             

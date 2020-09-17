@@ -1,0 +1,36 @@
+<?php
+
+use Illuminate\Database\Seeder;
+use TCG\Voyager\Models\DataType;
+use TCG\Voyager\Models\DataRow;
+use TCG\Voyager\Models\MenuItem;
+use TCG\Voyager\Models\Permission;
+
+class $CLASS_NAME$ extends Seeder
+{
+    public function run()
+    {
+        $DATA_TYPE$
+
+        $DATA_ROWS$
+
+        $DATA_MENU_ITEMS$
+
+        Permission::generateFor('$TABLE_NAME$');
+    }
+
+    protected function dataType($field, $for)
+    {
+        return DataType::where([$field => $for])->first();
+    }
+
+    protected function dataRows($data)
+    {
+        return DataRow::where($data)->first();
+    }
+
+    protected function getMenuItem($data)
+    {
+        return MenuItem::where($data)->first();
+    }
+}

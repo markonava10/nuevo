@@ -44,8 +44,8 @@ class ReceiversBreadTypeAdded extends Seeder
                 'generate_permissions' => 1,
                 'server_side' => 0,
                 'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
-                'created_at' => '2020-09-09T03:34:49.000000Z',
-                'updated_at' => '2020-09-17T17:40:33.000000Z',
+                'created_at' => '2020-09-09T03:34:49',
+                'updated_at' => '2020-09-17T17:40:33',
             ));
 
             

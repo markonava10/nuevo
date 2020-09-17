@@ -44,8 +44,8 @@ class ExchangesBreadTypeAdded extends Seeder
                 'generate_permissions' => 1,
                 'server_side' => 0,
                 'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
-                'created_at' => '2020-09-17T16:18:28.000000Z',
-                'updated_at' => '2020-09-17T16:59:19.000000Z',
+                'created_at' => '2020-09-17T16:18:28',
+                'updated_at' => '2020-09-17T16:59:19',
             ));
 
             
