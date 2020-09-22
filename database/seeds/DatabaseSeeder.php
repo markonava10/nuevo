@@ -57,6 +57,7 @@ class DatabaseSeeder extends Seeder
         $this->call(KeyMovementsBreadTypeAdded::class);
         $this->call(MarksBreadRowAdded::class);
         $this->call(MarksBreadTypeAdded::class);
+        $this->call(UsersTableSeeder::class);
         $this->call(SettingsTableSeeder::class);
         $this->command->info("Seeder created successfully! :)");
 

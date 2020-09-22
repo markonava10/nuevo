@@ -25,6 +25,7 @@ return [
         'marking_historys',
         'marks',
         'menus',
+        'menus_items',
         'moneyorders',
         'movements',
         'occupations',

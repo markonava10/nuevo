@@ -23,9 +23,9 @@ class ZipcodesBreadRowAdded extends Seeder
                 0 => 
                 array (
                     'data_type_id' => $dataType->id,
-                    'field' => 'id',
+                    'field' => 'zipcode',
                     'type' => 'text',
-                    'display_name' => 'Id',
+                    'display_name' => 'Zipcode',
                     'required' => 1,
                     'browse' => 1,
                     'read' => 1,
@@ -38,10 +38,10 @@ class ZipcodesBreadRowAdded extends Seeder
                 1 => 
                 array (
                     'data_type_id' => $dataType->id,
-                    'field' => 'Holtsville',
+                    'field' => 'town',
                     'type' => 'text',
-                    'display_name' => 'Holtsville',
-                    'required' => 0,
+                    'display_name' => 'Town',
+                    'required' => 1,
                     'browse' => 1,
                     'read' => 1,
                     'edit' => 1,
@@ -53,10 +53,10 @@ class ZipcodesBreadRowAdded extends Seeder
                 2 => 
                 array (
                     'data_type_id' => $dataType->id,
-                    'field' => 'UNIQUE',
+                    'field' => 'type',
                     'type' => 'text',
-                    'display_name' => 'UNIQUE',
-                    'required' => 0,
+                    'display_name' => 'Type',
+                    'required' => 1,
                     'browse' => 1,
                     'read' => 1,
                     'edit' => 1,
@@ -68,10 +68,10 @@ class ZipcodesBreadRowAdded extends Seeder
                 3 => 
                 array (
                     'data_type_id' => $dataType->id,
-                    'field' => 'NY',
+                    'field' => 'state',
                     'type' => 'text',
-                    'display_name' => 'NY',
-                    'required' => 0,
+                    'display_name' => 'State',
+                    'required' => 1,
                     'browse' => 1,
                     'read' => 1,
                     'edit' => 1,
@@ -83,10 +83,10 @@ class ZipcodesBreadRowAdded extends Seeder
                 4 => 
                 array (
                     'data_type_id' => $dataType->id,
-                    'field' => 'Suffolk_county',
+                    'field' => 'county',
                     'type' => 'text',
-                    'display_name' => 'Suffolk County',
-                    'required' => 0,
+                    'display_name' => 'County',
+                    'required' => 1,
                     'browse' => 1,
                     'read' => 1,
                     'edit' => 1,
@@ -98,10 +98,10 @@ class ZipcodesBreadRowAdded extends Seeder
                 5 => 
                 array (
                     'data_type_id' => $dataType->id,
-                    'field' => 'America_newyork',
+                    'field' => 'timezone',
                     'type' => 'text',
-                    'display_name' => 'America Newyork',
-                    'required' => 0,
+                    'display_name' => 'Timezone',
+                    'required' => 1,
                     'browse' => 1,
                     'read' => 1,
                     'edit' => 1,
@@ -113,10 +113,10 @@ class ZipcodesBreadRowAdded extends Seeder
                 6 => 
                 array (
                     'data_type_id' => $dataType->id,
-                    'field' => 's631',
+                    'field' => 'areacode',
                     'type' => 'text',
-                    'display_name' => 'S631',
-                    'required' => 0,
+                    'display_name' => 'Areacode',
+                    'required' => 1,
                     'browse' => 1,
                     'read' => 1,
                     'edit' => 1,
@@ -128,10 +128,10 @@ class ZipcodesBreadRowAdded extends Seeder
                 7 => 
                 array (
                     'data_type_id' => $dataType->id,
-                    'field' => 'c4081000000',
+                    'field' => 'latitude',
                     'type' => 'text',
-                    'display_name' => 'C4081000000',
-                    'required' => 0,
+                    'display_name' => 'Latitude',
+                    'required' => 1,
                     'browse' => 1,
                     'read' => 1,
                     'edit' => 1,
@@ -143,10 +143,10 @@ class ZipcodesBreadRowAdded extends Seeder
                 8 => 
                 array (
                     'data_type_id' => $dataType->id,
-                    'field' => 's_7304000000',
+                    'field' => 'longitude',
                     'type' => 'text',
-                    'display_name' => 'S 7304000000',
-                    'required' => 0,
+                    'display_name' => 'Longitude',
+                    'required' => 1,
                     'browse' => 1,
                     'read' => 1,
                     'edit' => 1,
@@ -158,10 +158,10 @@ class ZipcodesBreadRowAdded extends Seeder
                 9 => 
                 array (
                     'data_type_id' => $dataType->id,
-                    'field' => 'NA',
+                    'field' => 'region',
                     'type' => 'text',
-                    'display_name' => 'NA',
-                    'required' => 0,
+                    'display_name' => 'Region',
+                    'required' => 1,
                     'browse' => 1,
                     'read' => 1,
                     'edit' => 1,
@@ -173,10 +173,10 @@ class ZipcodesBreadRowAdded extends Seeder
                 10 => 
                 array (
                     'data_type_id' => $dataType->id,
-                    'field' => 'US',
+                    'field' => 'country',
                     'type' => 'text',
-                    'display_name' => 'US',
-                    'required' => 0,
+                    'display_name' => 'Country',
+                    'required' => 1,
                     'browse' => 1,
                     'read' => 1,
                     'edit' => 1,
@@ -186,36 +186,6 @@ class ZipcodesBreadRowAdded extends Seeder
                     'order' => 11,
                 ),
                 11 => 
-                array (
-                    'data_type_id' => $dataType->id,
-                    'field' => 'created_at',
-                    'type' => 'timestamp',
-                    'display_name' => 'Created At',
-                    'required' => 0,
-                    'browse' => 1,
-                    'read' => 1,
-                    'edit' => 1,
-                    'add' => 0,
-                    'delete' => 0,
-                    'details' => '{}',
-                    'order' => 12,
-                ),
-                12 => 
-                array (
-                    'data_type_id' => $dataType->id,
-                    'field' => 'updated_at',
-                    'type' => 'timestamp',
-                    'display_name' => 'Updated At',
-                    'required' => 0,
-                    'browse' => 0,
-                    'read' => 0,
-                    'edit' => 0,
-                    'add' => 0,
-                    'delete' => 0,
-                    'details' => '{}',
-                    'order' => 13,
-                ),
-                13 => 
                 array (
                     'data_type_id' => $dataType->id,
                     'field' => 'deleted_at',
@@ -228,7 +198,52 @@ class ZipcodesBreadRowAdded extends Seeder
                     'add' => 0,
                     'delete' => 0,
                     'details' => '{}',
+                    'order' => 12,
+                ),
+                12 => 
+                array (
+                    'data_type_id' => $dataType->id,
+                    'field' => 'created_at',
+                    'type' => 'timestamp',
+                    'display_name' => 'Created At',
+                    'required' => 1,
+                    'browse' => 1,
+                    'read' => 1,
+                    'edit' => 1,
+                    'add' => 0,
+                    'delete' => 0,
+                    'details' => '{}',
+                    'order' => 13,
+                ),
+                13 => 
+                array (
+                    'data_type_id' => $dataType->id,
+                    'field' => 'updated_at',
+                    'type' => 'timestamp',
+                    'display_name' => 'Updated At',
+                    'required' => 1,
+                    'browse' => 1,
+                    'read' => 1,
+                    'edit' => 1,
+                    'add' => 0,
+                    'delete' => 0,
+                    'details' => '{}',
                     'order' => 14,
+                ),
+                14 => 
+                array (
+                    'data_type_id' => $dataType->id,
+                    'field' => 'id',
+                    'type' => 'text',
+                    'display_name' => 'Id',
+                    'required' => 1,
+                    'browse' => 1,
+                    'read' => 1,
+                    'edit' => 1,
+                    'add' => 1,
+                    'delete' => 1,
+                    'details' => '{}',
+                    'order' => 15,
                 ),
             ));
         } catch(Exception $e) {

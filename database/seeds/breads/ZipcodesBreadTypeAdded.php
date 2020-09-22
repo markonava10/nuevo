@@ -31,27 +31,27 @@ class ZipcodesBreadTypeAdded extends Seeder
             }
 
             \DB::table('data_types')->insert(array (
-                'id' => 13,
+                'id' => 81,
                 'name' => 'zipcodes',
                 'slug' => 'zipcodes',
                 'display_name_singular' => 'Zipcode',
                 'display_name_plural' => 'Zipcodes',
-                'icon' => 'voyager-news',
+                'icon' => NULL,
                 'model_name' => 'App\\Zipcode',
                 'policy_name' => NULL,
                 'controller' => NULL,
                 'description' => NULL,
-                'generate_permissions' => 0,
-                'server_side' => 1,
+                'generate_permissions' => 1,
+                'server_side' => 0,
                 'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
-                'created_at' => '2020-09-03T06:40:33',
-                'updated_at' => '2020-09-17T17:59:08',
+                'created_at' => '2020-09-19T14:20:56.000000Z',
+                'updated_at' => '2020-09-19T14:33:27.000000Z',
             ));
 
             
             
 
-            
+            Voyager::model('Permission')->generateFor('zipcodes');
 
             $menu = Menu::where('name', config('voyager.bread.default_menu'))->firstOrFail();
 
@@ -67,7 +67,7 @@ class ZipcodesBreadTypeAdded extends Seeder
             if (!$menuItem->exists) {
                 $menuItem->fill([
                     'target' => '_self',
-                    'icon_class' => 'voyager-news',
+                    'icon_class' => '',
                     'color' => null,
                     'parent_id' => null,
                     'order' => $order,

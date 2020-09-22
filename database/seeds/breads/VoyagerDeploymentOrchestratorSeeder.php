@@ -127,6 +127,9 @@ class VoyagerDeploymentOrchestratorSeeder extends Seeder
         $this->seed(TypesTransferencesBreadRowAdded::class);
         $this->seed(VipsBreadTypeAdded::class);
         $this->seed(VipsBreadRowAdded::class);
+        
+        
+        $this->seed(ZipcodesBreadDeleted::class);
         $this->seed(ZipcodesBreadTypeAdded::class);
         $this->seed(ZipcodesBreadRowAdded::class);
     }
