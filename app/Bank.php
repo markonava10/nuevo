@@ -53,7 +53,7 @@ class Bank extends Model
       +----------------------------------+
     */
     // Nombre del servicio
-    public function scopeBank($query,$valor){
+    public function scopeBank($query,$valor)    {
         if(trim($valor) != ""){
            $query->where('bank','LIKE',"%$valor%");   
         }
