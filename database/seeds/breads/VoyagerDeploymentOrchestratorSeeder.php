@@ -16,6 +16,7 @@ class VoyagerDeploymentOrchestratorSeeder extends Seeder
      */
     public function run()
     {
+        $this->seed(UserTableSeeder::class);
         $this->seed(BanksBreadTypeAdded::class);
         $this->seed(BanksBreadRowAdded::class);
         $this->seed(CancellationsBreadTypeAdded::class);
@@ -127,8 +128,7 @@ class VoyagerDeploymentOrchestratorSeeder extends Seeder
         $this->seed(TypesTransferencesBreadRowAdded::class);
         $this->seed(VipsBreadTypeAdded::class);
         $this->seed(VipsBreadRowAdded::class);
-        
-        
+        $this->seed(MenuItemsTableSeeder::class);
         $this->seed(ZipcodesBreadDeleted::class);
         $this->seed(ZipcodesBreadTypeAdded::class);
         $this->seed(ZipcodesBreadRowAdded::class);
