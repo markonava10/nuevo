@@ -15,6 +15,9 @@ class CreateVipsTable extends Migration
     {
         Schema::create('vips', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('company_id')->constrained();
+            $table->string('spanish',20);
+            $table->string('english',20);
             $table->timestamps();
         });
     }

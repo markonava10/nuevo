@@ -27,6 +27,7 @@ class CreateCompaniesTable extends Migration
             $table->decimal('amount_to_require_id',12,2)->default(900);
             $table->decimal('amount_require_adicional_id',12,2)->default(2800);
             $table->integer('days_to_require_id')->default(30);
+            $table->integer('days_check_to_authorization')->default(15);
             $table->integer('adicional_ids')->default(2);
             $table->decimal('amount_to_notify',12,2)->default(2800);
             $table->integer('days_to_notify')->default(30);
@@ -46,8 +47,30 @@ class CreateCompaniesTable extends Migration
             $table->string('logo')->null();
             $table->boolean('active')->default('0');
             $table->timestamp('expire_at')->null();
+            $table->integer('process_open')->default();
+            $table->integer('process_close')->default();
+            $table->integer('tx_subsidiary')->default();
+            $table->integer('tx_safe')->default();
+            $table->integer('tx_register')->default();
+            $table->integer('tx_petty_cash')->default();
+            $table->integer('rx_subsidiary')->default();
+            $table->integer('rx_safe')->default();
+            $table->integer('rx_register')->default();
+            $table->integer('tx_express')->default();
+            $table->integer('ch_request')->default();
+            $table->integer('ch_accept')->default();
+            $table->integer('ch_change')->default();
+            $table->integer('ch_receive')->default();
+            $table->decimal('copies_rate',6,2)->default();
+            $table->decimal('fax_nat_first_page_rate',6,2)->default();
+            $table->decimal('fax_nat_extra_page_rate',6,2)->default();
+            $table->decimal('fax_int_extra_page_rate',6,2)->default();
+            $table->decimal('amount_max_by_mo',9,2)->default();
+            $table->decimal('amount_to_req_serial_mo',9,2)->default();
             // Las llaves foraneas
             $table->foreign('zipcode')->references('zipcode')->on('zipcodes')->onDelete('cascade');
+            $table->foreignId('service_id_payments')->constrained();
+            $table->foreignId('service_id_diference')->constrained();
             $table->softDeletes();
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent();

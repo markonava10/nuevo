@@ -21,9 +21,12 @@ class CreateAuthorizationsTable extends Migration {
 			$table->foreignId('receiver_id')->constrained();
 			$table->unsignedBigInteger('cashier_id');
 			$table->unsignedBigInteger('authorizer_id');
-
 			$table->float('amount_transaction', 10, 2);
 			$table->float('amount_before', 10, 2);
+			$table->float('amount_commission', 9,2);
+			$table->float('amount_commission_before', 9,2);
+			$table->float('percentage_transaction', 5,2);
+  			$table->float('percentage_before', 5,2);
 			$table->foreignId('status_id')->constrained();
 			$table->enum('result', ['Aproved', 'Canceled']);
 			$table->string('authorization_code');

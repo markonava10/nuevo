@@ -15,6 +15,12 @@ class CreateCtrsTable extends Migration
     {
         Schema::create('ctrs', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('customer_id')->constrained();
+            $table->foreignId('service_id')->constrained();
+            $table->timestamp('from_date');
+            $table->timestamp('to_date');
+            $table->integer('quantity')->default();
+            $table->float('total', 8,2)->default();
             $table->timestamps();
         });
     }

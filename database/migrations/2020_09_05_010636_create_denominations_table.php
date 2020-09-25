@@ -17,7 +17,9 @@ class CreateDenominationsTable extends Migration
             $table->id();
             $table->string('spanish',20);
             $table->string('english',20);
-            
+            $table->enum('type', ['B', 'C']);
+            $table->decimal('value', 6, 2);
+            $table->integer('qty_by_wad',3);
             $table->timestamps();
         });
     }

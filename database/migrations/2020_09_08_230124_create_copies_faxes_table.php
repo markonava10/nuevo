@@ -15,6 +15,9 @@ class CreateCopiesFaxesTable extends Migration
     {
         Schema::create('copies_faxes', function (Blueprint $table) {
             $table->id();
+            $table->integer('international_fax')->unsigned();
+            $table->integer('national_fax')->unsigned();
+            $table->integer('copies')->unsigned();
             $table->timestamps();
         });
     }
