@@ -41,17 +41,17 @@ class SubsidiariesBreadTypeAdded extends Seeder
                 'policy_name' => NULL,
                 'controller' => NULL,
                 'description' => NULL,
-                'generate_permissions' => 1,
-                'server_side' => 0,
+                'generate_permissions' => 0,
+                'server_side' => 1,
                 'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
-                'created_at' => '2020-09-09T02:45:57',
-                'updated_at' => '2020-09-17T17:50:59',
+                'created_at' => '2020-09-09T02:45:57.000000Z',
+                'updated_at' => '2020-09-25T21:10:25.000000Z',
             ));
 
             
             
 
-            Voyager::model('Permission')->generateFor('subsidiaries');
+            
 
             $menu = Menu::where('name', config('voyager.bread.default_menu'))->firstOrFail();
 
