@@ -12,7 +12,7 @@ class CreateDetailDenominationsTable extends Migration {
 	 */
 	public function up() {
 		Schema::create('detail_denominations', function (Blueprint $table) {
-			$table->id();
+			$table->increments('id');
 			$table->foreignId('movement_id')->constrained();
 			$table->foreignId('denomination_id')->constrained();
 			$table->integer('quantity')->unsigned(); // Cantidad

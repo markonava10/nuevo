@@ -14,7 +14,7 @@ class CreateChargesVipsTable extends Migration
     public function up()
     {
         Schema::create('charges_vips', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->foreignId('company_id')->constrained();
             $table->foreignId('service_id')->constrained();
             $table->foreignId('vip_id')->constrained();

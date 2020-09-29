@@ -12,7 +12,7 @@ class CreateKeyMovementsTable extends Migration {
 	 */
 	public function up() {
 		Schema::create('key_movements', function (Blueprint $table) {
-			$table->id();
+			$table->increments('id');
 			$table->foreignId('company_id')->constrained();
 			$table->integer('key')->unsigned();
 			$table->string('spanish', 20)->nullable();

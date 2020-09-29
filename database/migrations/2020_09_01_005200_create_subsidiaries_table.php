@@ -12,7 +12,7 @@ class CreateSubsidiariesTable extends Migration {
 	 */
 	public function up() {
 		Schema::create('subsidiaries', function (Blueprint $table) {
-			$table->id();
+			$table->increments('id');
 			$table->string('subsidiary', 80)->unique();
 			$table->string('address', 60)->null();
 			$table->integer('zipcode')->unsigned();

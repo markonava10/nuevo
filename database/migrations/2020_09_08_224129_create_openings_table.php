@@ -12,7 +12,7 @@ class CreateOpeningsTable extends Migration {
 	 */
 	public function up() {
 		Schema::create('openings', function (Blueprint $table) {
-			$table->id();
+			$table->increments('id');
 			$table->foreignId('register_id')->constrained();
 			$table->unsignedBigInteger('cashier_id');
 

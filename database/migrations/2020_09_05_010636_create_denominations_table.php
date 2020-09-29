@@ -14,7 +14,7 @@ class CreateDenominationsTable extends Migration
     public function up()
     {
         Schema::create('denominations', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->string('spanish',20);
             $table->string('english',20);
             $table->enum('type', ['B', 'C']);

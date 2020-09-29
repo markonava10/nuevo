@@ -12,7 +12,7 @@ class CreateProcessesTable extends Migration {
 	 */
 	public function up() {
 		Schema::create('processes', function (Blueprint $table) {
-            $table->id();
+			$table->increments('id');
             $table->foreignId('company_id')->constrained();
 			$table->string('spanish', 25);
 			$table->string('english', 25);

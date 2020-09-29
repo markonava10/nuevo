@@ -44,8 +44,8 @@ class CountriesBreadTypeAdded extends Seeder
                 'generate_permissions' => 1,
                 'server_side' => 0,
                 'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
-                'created_at' => '2020-09-03T06:01:01',
-                'updated_at' => '2020-09-17T16:53:07',
+                'created_at' => '2020-09-03T11:01:01',
+                'updated_at' => '2020-09-28T20:36:47',
             ));
 
             

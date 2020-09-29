@@ -14,7 +14,7 @@ class CreateOccupationsTable extends Migration
     public function up()
     {
         Schema::create('occupations', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->timestamps();
         });
     }

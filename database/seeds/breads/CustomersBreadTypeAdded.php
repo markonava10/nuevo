@@ -44,8 +44,8 @@ class CustomersBreadTypeAdded extends Seeder
                 'generate_permissions' => 1,
                 'server_side' => 0,
                 'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
-                'created_at' => '2020-09-02T05:41:37.000000Z',
-                'updated_at' => '2020-09-25T23:05:42.000000Z',
+                'created_at' => '2020-09-02T10:41:37',
+                'updated_at' => '2020-09-28T20:38:11',
             ));
 
             

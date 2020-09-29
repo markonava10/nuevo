@@ -12,7 +12,7 @@ class CreateStatusesTable extends Migration {
 	 */
 	public function up() {
 		Schema::create('statuses', function (Blueprint $table) {
-			$table->id();
+			$table->increments('id');
 			$table->string('status', 20)->unique();
 			$table->string('short', 5)->unique();
 			$table->timestamps();

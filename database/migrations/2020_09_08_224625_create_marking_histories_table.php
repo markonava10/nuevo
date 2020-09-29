@@ -12,7 +12,7 @@ class CreateMarkingHistoriesTable extends Migration {
 	 */
 	public function up() {
 		Schema::create('marking_histories', function (Blueprint $table) {
-			$table->id();
+			$table->increments('id');
 			$table->foreignId('customer_id')->constrained();
 			$table->foreignId('mark_id')->constrained();
 			$table->foreignId('user_id')->constrained();

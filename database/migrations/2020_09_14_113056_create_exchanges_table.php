@@ -12,7 +12,7 @@ class CreateExchangesTable extends Migration {
 	 */
 	public function up() {
 		Schema::create('exchanges', function (Blueprint $table) {
-			$table->id();
+			$table->increments('id');
 			$table->foreignId('issue_id')->constrained();
 			$table->foreignId('bank_id')->constrained();
 			$table->decimal('exchange_rate', 8, 4)->default(0);

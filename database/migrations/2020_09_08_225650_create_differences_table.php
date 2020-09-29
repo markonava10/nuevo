@@ -14,7 +14,7 @@ class CreateDifferencesTable extends Migration
     public function up()
     {
         Schema::create('differences', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->timestamps();
         });
     }

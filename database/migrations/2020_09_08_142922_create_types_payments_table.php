@@ -14,7 +14,7 @@ class CreateTypesPaymentsTable extends Migration
     public function up()
     {
         Schema::create('types_payments', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->string('spanish',20);
             $table->string('short_spanish',6);
             $table->string('english',20);

@@ -12,7 +12,7 @@ class CreatePaymentsTable extends Migration {
 	 */
 	public function up() {
 		Schema::create('payments', function (Blueprint $table) {
-			$table->id();
+			$table->increments('id');
 			$table->unsignedBigInteger('type_payment_id')->unsigned();
 			$table->softDeletes();
 			$table->timestamp('created_at')->useCurrent();

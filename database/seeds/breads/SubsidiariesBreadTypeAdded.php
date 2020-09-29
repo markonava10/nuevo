@@ -44,8 +44,8 @@ class SubsidiariesBreadTypeAdded extends Seeder
                 'generate_permissions' => 0,
                 'server_side' => 1,
                 'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
-                'created_at' => '2020-09-09T02:45:57.000000Z',
-                'updated_at' => '2020-09-25T21:10:25.000000Z',
+                'created_at' => '2020-09-09T02:45:57',
+                'updated_at' => '2020-09-25T21:10:25',
             ));
 
             

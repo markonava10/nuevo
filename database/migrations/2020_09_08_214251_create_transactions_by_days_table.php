@@ -14,7 +14,7 @@ class CreateTransactionsByDaysTable extends Migration
     public function up()
     {
         Schema::create('transactions_by_days', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->timestamps();
         });
     }

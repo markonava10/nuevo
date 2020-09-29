@@ -14,7 +14,7 @@ class CreateCompanyProvidersTable extends Migration
     public function up()
     {
         Schema::create('company_providers', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->timestamps();
         });
     }

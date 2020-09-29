@@ -12,7 +12,7 @@ class CreateAuthorizationsTable extends Migration {
 	 */
 	public function up() {
 		Schema::create('authorizations', function (Blueprint $table) {
-			$table->id();
+			$table->increments('id');
 			$table->foreignId('subsidiary_id')->constrained();
 			$table->foreignId('service_id')->constrained();
 			$table->date('date');

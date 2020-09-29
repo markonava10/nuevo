@@ -14,7 +14,7 @@ class CreateTypesRechargesTable extends Migration
     public function up()
     {
         Schema::create('types_recharges', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->timestamps();
         });
     }

@@ -12,7 +12,7 @@ class CreateKeyabblesTable extends Migration {
 	 */
 	public function up() {
 		Schema::create('keyabbles', function (Blueprint $table) {
-			$table->id();
+			$table->increments('id');
 			$table->integer('keyable_id')->unsigned();
 			$table->string('keyable_type')->nullable();
 			$table->timestamps();

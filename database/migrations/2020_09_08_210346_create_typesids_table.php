@@ -14,7 +14,7 @@ class CreateTypesidsTable extends Migration
     public function up()
     {
         Schema::create('typesids', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->timestamps();
         });
     }

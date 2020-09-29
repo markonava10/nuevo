@@ -12,7 +12,7 @@ class CreatePayersTable extends Migration {
 	 */
 	public function up() {
 		Schema::create('payers', function (Blueprint $table) {
-			$table->id();
+			$table->increments('id');
 			$table->string('payer', 50)->unique();
 			$table->string('short', 10)->unique();
 			$table->string('logo', 150)->nullable();

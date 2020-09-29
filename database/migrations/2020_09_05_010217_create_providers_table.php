@@ -14,7 +14,7 @@ class CreateProvidersTable extends Migration
     public function up()
     {
         Schema::create('providers', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->string('provider',80)->unique();
             $table->string('short',30)->unique();
             $table->string('logo')->nullable()->default(null);

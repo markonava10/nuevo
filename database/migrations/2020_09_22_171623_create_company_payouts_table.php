@@ -14,7 +14,7 @@ class CreateCompanyPayoutsTable extends Migration
     public function up()
     {
         Schema::create('company_payouts', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->timestamps();
         });
     }

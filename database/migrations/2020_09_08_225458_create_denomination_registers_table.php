@@ -14,7 +14,7 @@ class CreateDenominationRegistersTable extends Migration
     public function up()
     {
         Schema::create('denomination_registers', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->timestamps();
         });
     }

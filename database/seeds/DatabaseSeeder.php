@@ -11,7 +11,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UserSeeder::class);
+        $this->call(AuthorizationsTableSeeder::class);
         $this->call(BanksBreadRowAdded::class);
         $this->call(BanksBreadTypeAdded::class);
         $this->call(CancellationsBreadRowAdded::class);
@@ -21,7 +21,7 @@ class DatabaseSeeder extends Seeder
         $this->call(ChargesBreadRowAdded::class);
         $this->call(ChargesBreadTypeAdded::class);
         $this->call(ChargesVipsBreadRowAdded::class);
-        $this->call(ChargesVipsBreadTYpeAdded::class);
+        $this->call(ChargesVipsBreadTypeAdded::class);
         $this->call(CompaniesBreadRowAdded::class);
         $this->call(CompaniesBreadTypeAdded::class);
         $this->call(CopiesFaxesBreadRowAdded::class);
@@ -59,6 +59,7 @@ class DatabaseSeeder extends Seeder
         $this->call(MarksBreadTypeAdded::class);
         $this->call(UsersTableSeeder::class);
         $this->call(SettingsTableSeeder::class);
+        $this->call(ZipcodeTableSeeder::class);
         $this->command->info("Seeder created successfully! :)");
 
     }

@@ -14,7 +14,7 @@ class CreateTypesPayoutsTable extends Migration
     public function up()
     {
         Schema::create('types_payouts', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->timestamps();
         });
     }

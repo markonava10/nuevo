@@ -14,7 +14,7 @@ class CreateMoneyordersTable extends Migration
     public function up()
     {
         Schema::create('moneyorders', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->timestamps();
         });
     }

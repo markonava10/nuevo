@@ -14,7 +14,7 @@ class CreatePermissionCustomersTable extends Migration
     public function up()
     {
         Schema::create('permission_customers', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->timestamps();
         });
     }

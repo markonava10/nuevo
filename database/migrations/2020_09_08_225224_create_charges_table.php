@@ -12,7 +12,7 @@ class CreateChargesTable extends Migration {
 	 */
 	public function up() {
 		Schema::create('charges', function (Blueprint $table) {
-			$table->id();
+			$table->increments('id');
 			$table->foreignId('company_id')->constrained();
 			$table->foreignId('service_id')->constrained();
 			$table->float('lower_limit', 8, 2);

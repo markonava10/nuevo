@@ -2,6 +2,7 @@
 
 return [
     'tables' => [
+        'authorizations',
         'banks',
         'cancellations',
         'categories',

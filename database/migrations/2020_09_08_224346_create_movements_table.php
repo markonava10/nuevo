@@ -12,7 +12,7 @@ class CreateMovementsTable extends Migration {
 	 */
 	public function up() {
 		Schema::create('movements', function (Blueprint $table) {
-			$table->id();
+			$table->increments('id');
 			$table->foreignId('register_id')->constrained();
 			$table->unsignedBigInteger('cashier_id')->unsigned(); // Cajero
 			$table->unsignedBigInteger('key_movement_id')->unsigned(); // Clave Movimiento

@@ -12,7 +12,7 @@ class CreateMarksTable extends Migration {
 	 */
 	public function up() {
 		Schema::create('marks', function (Blueprint $table) {
-			$table->id();
+			$table->increments('id');
 			$table->foreignId('company_id')->constrained();
 			$table->string('mark', 80);
 			$table->enum('action', ['M', 'U']);

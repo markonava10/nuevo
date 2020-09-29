@@ -14,7 +14,7 @@ class CreateExhcangeRatesTable extends Migration
     public function up()
     {
         Schema::create('exhcange_rates', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->timestamps();
         });
     }

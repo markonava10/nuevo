@@ -12,7 +12,7 @@ class CreateTransfersTable extends Migration {
 	 */
 	public function up() {
 		Schema::create('transfers', function (Blueprint $table) {
-			$table->id();
+			$table->increments('id');
 			$table->foreignId('receiver_id')->constrained();
 			$table->foreignId('payer_id')->constrained();
 			$table->decimal('exchange_rate', 8, 4)->default(0);

@@ -12,7 +12,7 @@ class CreateReasonsTable extends Migration {
 	 */
 	public function up() {
 		Schema::create('reasons', function (Blueprint $table) {
-			$table->id();
+			$table->increments('id');
 			$table->string('reason', 80);
 			$table->foreignId('company_id')->constrained();
 			$table->foreignId('service_id')->constrained();

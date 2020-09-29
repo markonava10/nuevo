@@ -14,7 +14,7 @@ class CreateVipsTable extends Migration
     public function up()
     {
         Schema::create('vips', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->foreignId('company_id')->constrained();
             $table->string('spanish',20);
             $table->string('english',20);

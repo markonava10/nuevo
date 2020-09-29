@@ -12,7 +12,7 @@ class CreateTotalsTable extends Migration {
 	 */
 	public function up() {
 		Schema::create('totals', function (Blueprint $table) {
-			$table->id();
+			$table->increments('id');
 			$table->foreignId('customer_id')->constrained();
 			$table->unsignedBigInteger('service_id_1')->unsigned();
 			$table->float('total1', 8, 2)->default('0'); // Importe

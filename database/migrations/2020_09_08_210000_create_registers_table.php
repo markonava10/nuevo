@@ -12,7 +12,7 @@ class CreateRegistersTable extends Migration {
 	 */
 	public function up() {
 		Schema::create('registers', function (Blueprint $table) {
-			$table->id();
+			$table->increments('id');
 			$table->foreignId('subsidiary_id')->constrained();
 			$table->string('register', 20);
 			$table->enum('type', ['N', 'S'])->default('N'); // N=Normal S=Safe (Fuerte)

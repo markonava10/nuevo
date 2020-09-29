@@ -12,7 +12,7 @@ class CreateReceiversTable extends Migration {
 	 */
 	public function up() {
 		Schema::create('receivers', function (Blueprint $table) {
-			$table->id();
+			$table->increments('id');
 			$table->string('first_name', 40);
 			$table->string('last_name', 40);
 			$table->string('email')->nullable();

@@ -14,7 +14,7 @@ class CreateCtrsTable extends Migration
     public function up()
     {
         Schema::create('ctrs', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->foreignId('customer_id')->constrained();
             $table->foreignId('service_id')->constrained();
             $table->timestamp('from_date');

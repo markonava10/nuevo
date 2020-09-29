@@ -14,7 +14,7 @@ class CreateBanksTable extends Migration
     public function up()
     {
         Schema::create('banks', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->string('bank',80)->unique();
             $table->string('short',30)->unique();
             $table->softDeletes();

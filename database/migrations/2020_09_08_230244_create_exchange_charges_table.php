@@ -12,7 +12,7 @@ class CreateExchangeChargesTable extends Migration {
 	 */
 	public function up() {
 		Schema::create('exchange_charges', function (Blueprint $table) {
-			$table->id();
+			$table->increments('id');
 			$table->foreignId('company_id')->constrained();
 			$table->date('exchange_date');
 			$table->float('exchange_rate', 9, 5);

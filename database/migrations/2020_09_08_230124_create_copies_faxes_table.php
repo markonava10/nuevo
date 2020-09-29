@@ -14,7 +14,7 @@ class CreateCopiesFaxesTable extends Migration
     public function up()
     {
         Schema::create('copies_faxes', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->integer('international_fax')->unsigned();
             $table->integer('national_fax')->unsigned();
             $table->integer('copies')->unsigned();

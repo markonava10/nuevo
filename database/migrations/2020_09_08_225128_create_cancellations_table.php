@@ -12,7 +12,7 @@ class CreateCancellationsTable extends Migration {
 	 */
 	public function up() {
 		Schema::create('cancellations', function (Blueprint $table) {
-			$table->id();
+			$table->increments('id');
 			$table->foreignId('transaction_id')->constrained();
 			$table->foreignId('reason_id')->constrained();
 			$table->foreignId('user_id')->constrained();
